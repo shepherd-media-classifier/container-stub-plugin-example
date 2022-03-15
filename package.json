@@ -1,0 +1,32 @@
+{
+  "name": "container-stub-plugin-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "npx rimraf build && tsc",
+    "postversion": "git push && git push --tags && npm run build && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shepherd-media-classifier/container-stub-plugin-example.git"
+  },
+  "keywords": [],
+  "author": "rosmcmahon",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/shepherd-media-classifier/container-stub-plugin-example/issues"
+  },
+  "homepage": "https://github.com/shepherd-media-classifier/container-stub-plugin-example#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1093.0",
+    "axios": "^0.26.1",
+    "shepherd-plugin-interfaces": "^0.2.0"
+  }
+}
