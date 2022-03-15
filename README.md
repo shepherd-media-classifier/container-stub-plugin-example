@@ -1,0 +1,1 @@
+# container-stub-plugin-example
