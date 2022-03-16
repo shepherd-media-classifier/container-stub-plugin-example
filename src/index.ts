@@ -10,10 +10,11 @@ import axios from 'axios'
 
 
 /* Naive API implementation. (Suitable for fast returning functions only)  */
+
 const checkFileAPI = async(buffer: Buffer, mimetype: string, txid: string): Promise<FilterResult | FilterErrorResult> => {
 
 	// how long will this take with shepherd waiting for this on the call stack? may not perform too well
-	const { data } = await axios.put('http://your-container/check', { buffer, mimetype, txid})
+	const { data } = await axios.post('http://your-container/check', { buffer, mimetype, txid})
 
 	// just return true or false directly to shepherd (for another option see S3 example's return type)
 	return {
